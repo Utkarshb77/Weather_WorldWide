@@ -1,0 +1,69 @@
+.App {
+	min-height: 100vh;
+	padding: 2rem 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.WeatherApp {
+	width: 100%;
+	max-width: 760px;
+}
+
+.weather-shell {
+	border: 1px solid var(--line);
+	border-radius: 24px;
+	padding: 2rem 1.25rem;
+	background: var(--panel);
+	backdrop-filter: blur(10px);
+	text-align: center;
+	box-shadow: 0 30px 70px rgba(2, 7, 23, 0.45);
+	animation: rise-in 650ms ease-out;
+}
+
+.weather-kicker {
+	margin: 0;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	font-size: 0.72rem;
+	color: #fdba74;
+	font-weight: 700;
+}
+
+.weather-shell h1 {
+	margin: 0.35rem 0 0;
+	font-family: 'Sora', sans-serif;
+	font-weight: 800;
+	color: #f8fbff;
+	font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.weather-subtitle {
+	margin: 0.6rem auto 1.7rem;
+	max-width: 560px;
+	color: var(--muted);
+	font-size: 0.97rem;
+}
+
+@keyframes rise-in {
+	from {
+		opacity: 0;
+		transform: translateY(14px) scale(0.98);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+@media (max-width: 520px) {
+	.App {
+		padding: 1rem 0.7rem;
+	}
+
+	.weather-shell {
+		border-radius: 18px;
+		padding: 1.4rem 0.9rem;
+	}
+}
